@@ -9,9 +9,9 @@ class Program
 
         PromptGen prompt1 = new PromptGen();
 
-       Entry entry1 = new Entry();
+        Entry entry1 = new Entry();
 
-        entry1.EntryAndSave();
+        journal1.FindChoice();
 
     }
 }

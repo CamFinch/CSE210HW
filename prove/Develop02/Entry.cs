@@ -32,8 +32,6 @@ public class Entry
             outputFile.WriteLine($"{date} \nPrompt: \n{journalEntry}");
 
        
-
-
     }
     }
 
@@ -42,15 +40,12 @@ public class Entry
     Console.WriteLine("Enter File To Load From: ");
     string fileName = Console.ReadLine();
 
-
-    
     List<string> lines = System.IO.File.ReadAllLines(fileName).ToList();
 
     foreach(string s in lines)
 {
     Console.WriteLine(s);
 }  
-    
 
 
     }

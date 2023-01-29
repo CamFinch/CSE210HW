@@ -11,7 +11,7 @@ class Program
 
         Entry entry1 = new Entry();
 
-        journal1.FindChoice();
+        prompt1.GivePrompt();
 
     }
 }

@@ -2,34 +2,25 @@ using System;
 using System.IO;
 
 
-public class Entry
+class Entry
 {
-    public string filePath;
-    public string journalEntry;
+    public string filePath, journalEntry, newFileName, fileName, loadList;
 
-    public string newFileName;
-
-    public string fileName;
     
-    
-
     PromptGen promptgen1 = new PromptGen();
     DateTime date = DateTime.Now;
+    Journal journal2 = new Journal();
    
 
     
-    public void EntryAndSave(){
+    public void Save(){
 
         Console.WriteLine("What Would you Like to name the file to be saved to?");
         string newFileName = Console.ReadLine();
 
         
-
-        Console.WriteLine($"Prompt: {promptgen1.prompt}");
-        string journalEntry = Console.ReadLine();
-
         using (StreamWriter outputFile = new StreamWriter(newFileName)){
-            outputFile.WriteLine($"{date} \nPrompt: \n{journalEntry}");
+            outputFile.WriteLine($"{date} \nPrompt: {promptgen1.prompt} \n{journal2.writeLoad}");
 
        
     }
@@ -42,10 +33,10 @@ public class Entry
 
     List<string> lines = System.IO.File.ReadAllLines(fileName).ToList();
 
-    foreach(string s in lines)
-{
-    Console.WriteLine(s);
-}  
+    foreach(string line in lines)
+    {
+        loadList = line;
+    }  
 
 
     }

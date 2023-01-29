@@ -1,14 +1,16 @@
 using System;
 using System.IO;
 
-public class Journal
+class Journal
 {
 
     public string fileName;
     public string journalEntry;
     public string choice;
+    public string writeLoad;
 
-    Entry entry1 = new Entry();
+    Entry entry2 = new Entry();
+    PromptGen prompt1 = new PromptGen();
 
 
 
@@ -30,12 +32,14 @@ public class Journal
 
             if (choice == "1"){
                 // Write
+                Write();
                 i++;
-                entry1.EntryAndSave();
+                
         
             }
             else if (choice == "2"){
                 //Display
+                Display();
                 i++;
             
             }
@@ -43,12 +47,13 @@ public class Journal
             else if (choice == "3"){
                 //Load
                 i++;
-                entry1.Load();
+                entry2.Load();
               
             }
 
             else if (choice == "4"){
                 //Save
+                entry2.Save();
                 i++;
 
             }
@@ -68,18 +73,17 @@ public class Journal
     }
 
 
-    public void WriteJournalFile(){
+    public void Write(){
+        
+        Console.WriteLine($"Prompt: {prompt1.prompt} \n");
+        writeLoad = Console.ReadLine();
+        
 
-    
-
- 
-            
         }
-    
 
-    
+    public void Display(){
 
-
-
+        Console.WriteLine(entry2.loadList);
+    }
     
 }

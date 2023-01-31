@@ -7,11 +7,11 @@ class Program
     {
         Journal journal1 = new Journal();
 
-        PromptGen prompt1 = new PromptGen();
+    
 
-        Entry entry1 = new Entry();
+       Entry entry1 = new Entry();
 
-        prompt1.GivePrompt();
+        journal1.FindChoice();
 
     }
 }

@@ -1,9 +1,18 @@
 using System;
-
+using System.IO;
 class Program
 {
-    static void Main(string[] args)
+    
+    
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+    
+    Scripture scripture1 = new Scripture();
+    
+    scripture1.Menu();
+        
+        
     }
+   
+    
 }

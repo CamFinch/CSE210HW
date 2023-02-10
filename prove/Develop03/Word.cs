@@ -12,10 +12,14 @@ public class Word{
 
     public void Hide(){
         Random random = new Random();
+        Random random2 = new Random();
         int randomNumber = random.Next(0, shownText.Count);
+        int randomNumber2 = random2.Next(0, shownText.Count);
         if(shownText[randomNumber] != "---"){
             shownText.RemoveAt(randomNumber);
             shownText.Insert(randomNumber, "---");
+            shownText.RemoveAt(randomNumber2);
+            shownText.Insert(randomNumber2, "---");
         }
         else{
             Hide();

@@ -15,15 +15,53 @@ public class Word{
         Random random2 = new Random();
         int randomNumber = random.Next(0, shownText.Count);
         int randomNumber2 = random2.Next(0, shownText.Count);
-        if(shownText[randomNumber] != "---"){
-            shownText.RemoveAt(randomNumber);
-            shownText.Insert(randomNumber, "---");
-            shownText.RemoveAt(randomNumber2);
-            shownText.Insert(randomNumber2, "---");
+        int numLetter = shownText[randomNumber].Length;
+        if(numLetter == 3){
+            if(shownText[randomNumber] != "---"){
+                shownText.RemoveAt(randomNumber);
+                shownText.Insert(randomNumber, "---");
+                shownText.RemoveAt(randomNumber2);
+                shownText.Insert(randomNumber2, "---");
+            }
+            else{
+                Hide();
+            }
         }
-        else{
-            Hide();
+        if(numLetter == 4){
+            if(shownText[randomNumber] != "----"){
+                shownText.RemoveAt(randomNumber);
+                shownText.Insert(randomNumber, "----");
+                shownText.RemoveAt(randomNumber2);
+                shownText.Insert(randomNumber2, "----");
+            }
+            else{
+                Hide();
+            }
         }
+        if(numLetter == 5){
+            if(shownText[randomNumber] != "-----"){
+                shownText.RemoveAt(randomNumber);
+                shownText.Insert(randomNumber, "-----");
+                shownText.RemoveAt(randomNumber2);
+                shownText.Insert(randomNumber2, "-----");
+            }
+            else{
+                Hide();
+            }
+        }
+        if(numLetter == 6){
+            if(shownText[randomNumber] != "------"){
+                shownText.RemoveAt(randomNumber);
+                shownText.Insert(randomNumber, "------");
+                shownText.RemoveAt(randomNumber2);
+                shownText.Insert(randomNumber2, "------");
+            }
+            else{
+                Hide();
+            }
+        }
+
+        
     }
 
     public void WriteText(){

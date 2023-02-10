@@ -21,7 +21,9 @@ public class Word{
     public void WriteText(){
         string joined = string.Join(" ", shownText);
         Console.WriteLine(joined);
-        
+        if(shownText[0] == "---" && shownText[1] == "---" && shownText[2] == "---" && shownText[3] == "---" && shownText[4] == "---" && shownText[5] == "---" && shownText[6] == "---" && shownText[7] == "---" && shownText[8] == "---" && shownText[9] == "---" && shownText[10] == "---" && shownText[11] == "---" && shownText[12] == "---" && shownText[13] == "---" && shownText[14] == "---" ){
+            System.Environment.Exit(0);
+        }
     }
 
     

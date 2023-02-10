@@ -13,9 +13,13 @@ public class Word{
     public void Hide(){
         Random random = new Random();
         int randomNumber = random.Next(0, shownText.Count);
-        shownText.RemoveAt(randomNumber);
-        shownText.Insert(randomNumber, "---");
-        
+        if(shownText[randomNumber] != "---"){
+            shownText.RemoveAt(randomNumber);
+            shownText.Insert(randomNumber, "---");
+        }
+        else{
+            Hide();
+        }
     }
 
     public void WriteText(){

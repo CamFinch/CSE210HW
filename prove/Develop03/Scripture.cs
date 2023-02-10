@@ -35,6 +35,7 @@ public class Scripture{
             else if(userEnter == "EXIT"){
                 isActive = false;
             }
+            
             else{
                 Console.WriteLine("Incorrect Input: ");
                 Menu();

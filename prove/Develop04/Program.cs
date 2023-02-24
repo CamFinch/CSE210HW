@@ -9,7 +9,7 @@ class Program
         bool menuActive = true;
         Control control1 = new Control("Menu", "End");
         while(menuActive){
-            Console.Write("Welcome!");
+            Console.Write("\nWelcome!");
             Console.Write("\nMenu Options: \n");
             Console.WriteLine("\n1. Breathing Activity \n2. Reflecting Activity \n3. Listing Activity \n4. Quit");
             Console.WriteLine("\nSelect Option: ");

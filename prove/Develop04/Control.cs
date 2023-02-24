@@ -28,21 +28,14 @@ public class Control{
             Console.Write(s);
             Thread.Sleep(200);
             Console.Write("\b\b");
+            
 
         }
         
         
+        
     }
     
-
-   // public void GetTime(){
-       // Console.WriteLine("How Many Seconds Would You Like This Activity To Last?");
-        //string timeChoiceString = Console.ReadLine();
-        //int timeChoice = int.Parse(timeChoiceString);
-        //int choiceMilliseconds = timeChoice * 1000;
-        //TimeSpan interval = new TimeSpan(0, 0, timeChoice);
-
-    //}
     
     
 }

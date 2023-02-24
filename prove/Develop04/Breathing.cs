@@ -87,11 +87,11 @@ public class Breathing : Control
             {
                 Animation();
             }
-            Console.Write("\b\b");
+            Console.WriteLine("\b\b");
             s.Stop();
             s.Reset();
-            Console.WriteLine("\n");
-            Console.WriteLine($"\nYou Have Completed {timeChoiceString} Seconds Of Breathing!!");
+            
+            Console.WriteLine($"\nYou Have Completed {timeChoiceString} Seconds Of Breathing!!\n");
 
             
             
